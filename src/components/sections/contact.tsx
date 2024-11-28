@@ -12,10 +12,10 @@ import Container from '@/components/layout/container';
 import useWindowSize from '@/hooks/use-window-size';
 import { copyTextToClipboard } from '@/lib/utils';
 
-let email = 'reachsagarshah@gmail.com';
-let phone = '+91 8980500565';
+let email = "sardaribrar7688@gmail.com";
+let phone = "+92 3047700074";
 
-type CopyValue = 'email' | 'phone';
+type CopyValue = "email" | "phone";
 
 const ContactSection = () => {
   const { width } = useWindowSize();
@@ -37,7 +37,7 @@ const ContactSection = () => {
     } catch (error) {
       setIsCopied(false);
       setCopiedValueType(null);
-      alert('Unable to copy!');
+      alert("Unable to copy!");
     }
   };
 
@@ -61,9 +61,9 @@ const ContactSection = () => {
             <Typography variant="h2">{email}</Typography>
             {/* </Link> */}
             <IconButton
-              size={width && width < 768 ? 'md' : 'lg'}
-              onClick={() => handleCopyClick(email, 'email')}
-              showTooltip={isCopied && copiedValueType === 'email'}
+              size={width && width < 768 ? "md" : "lg"}
+              onClick={() => handleCopyClick(email, "email")}
+              showTooltip={isCopied && copiedValueType === "email"}
               tooltipText="Copied!"
             >
               <Copy />
@@ -75,9 +75,9 @@ const ContactSection = () => {
             <Typography variant="h2">{phone}</Typography>
             {/* </Link> */}
             <IconButton
-              size={width && width < 768 ? 'md' : 'lg'}
-              onClick={() => handleCopyClick(phone.replace(' ', ''), 'phone')}
-              showTooltip={isCopied && copiedValueType === 'phone'}
+              size={width && width < 768 ? "md" : "lg"}
+              onClick={() => handleCopyClick(phone.replace(" ", ""), "phone")}
+              showTooltip={isCopied && copiedValueType === "phone"}
               tooltipText="Copied!"
             >
               <Copy />
