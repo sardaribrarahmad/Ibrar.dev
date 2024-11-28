@@ -98,10 +98,10 @@ const Header = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-4 p-4">
-              <div className="flex items-center justify-between">
-                {/* <Typography>Switch Theme</Typography>
-                <ThemeSwitcher /> */}
-              </div>
+              {/* <div className="flex items-center justify-between">
+                <Typography>Switch Theme</Typography>
+                <ThemeSwitcher />
+              </div> */}
               <DownloadCV />
             </div>
           </DrawerContent>
