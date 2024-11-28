@@ -9,7 +9,7 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Sagar Shah | Full Stack Developer From Ahmedabad, India.';
+const title = "Sardar Ibrar | Frontend developer  ";
 const description =
   'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
 const url = 'https://sagarshah.dev';
@@ -63,8 +63,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark !scroll-smooth" suppressHydrationWarning>
-      <body className="bg-gray text-gray-600 antialiased">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+      {googleAnalyticsId ? (
+        <head>
+          <Script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          ></Script>
+          <Script id="google-anayltics-script">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', '${googleAnalyticsId}');
+          `}
+          </Script>
+        </head>
+      ) : null}
+      <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
         <Providers>
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
