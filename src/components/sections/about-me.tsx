@@ -34,20 +34,20 @@ const AboutMeSection = () => {
             Curious about me? Here you have it:
           </Typography>
           <Typography>
-            I&apos;m a passionate, self-proclaimed Developer who specializes in
-            full stack development (React.js & Node.js). I am enthusiastic about
+            Im a passionate, self-proclaimed Developer who specializes in full
+            stack development (React.js & Node.js). I am enthusiastic about
             bringing the technical and visual aspects of digital products to
             life. User experience, pixel perfect design, and writing clear,
             readable, highly performant code matters to me.
           </Typography>
           <Typography>
             I began my journey as a web developer in 2020 from start of
-            bachelor's and since then, I&apos;ve continued to grow and evolve as
-            a developer, taking on new challenges and learning the latest
+            bachelor's and since then, Ive continued to grow and evolve as a
+            developer, taking on new challenges and learning the latest
             technologies along the way. Now, in my early thirties, 4 years after
-            starting my web development journey, I&apos;m building cutting-edge
-            web applications using modern technologies such as Next.js,
-            TypeScript Tailwindcss, Supabase and much more.
+            starting my web development journey, Im building cutting-edge web
+            applications using modern technologies such as Next.js, TypeScript
+            Tailwindcss, Supabase and much more.
           </Typography>
           <Typography>
             I am very much a progressive thinker and enjoy working on products
