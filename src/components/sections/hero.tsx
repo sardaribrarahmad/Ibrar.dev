@@ -9,7 +9,7 @@ import Container from "@/components/layout/container";
 
 const HeroSection = () => {
   const [text, setText] = useState("");
-  const fullText = "Hi,I'm Sardar Ibrar Ahmad";
+  const fullText = "Hi, I'm Sardar Ibrar Ahmad";
   const delay = 100; // Delay in milliseconds between characters
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const HeroSection = () => {
 
     const interval = setInterval(() => {
       if (index < fullText.length) {
-        setText((prev) => prev + fullText.charAt(index));
+        setText(fullText.slice(0, index + 1)); // Use slicing to avoid state overlap
         index++;
       } else {
         clearInterval(interval);
@@ -26,6 +26,7 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <Container id="hero">
       <div className="flex flex-col gap-12 md:flex-row">

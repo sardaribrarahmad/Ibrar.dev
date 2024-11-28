@@ -50,7 +50,7 @@ const AboutMeSection = () => {
           </Typography>
           <Typography>
             I am very much a progressive thinker and enjoy working on products
-            end to end, from ideation all the way to development.
+            end to end, from ideation all the way to development
             <Link
               noCustomization
               externalLink
