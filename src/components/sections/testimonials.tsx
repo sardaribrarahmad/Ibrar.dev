@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
         </Typography>
       </div>
 
-      <div className="flex gap-12 max-md:flex-col md:max-lg:flex-wrap">
+      <div className="flex gap-12 text-justify max-md:flex-col md:max-lg:flex-wrap">
         {TESTIMONIALS?.map((testimonial, index) => (
           <TestimonialDetails key={index} {...testimonial} />
         ))}

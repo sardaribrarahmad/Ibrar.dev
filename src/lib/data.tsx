@@ -42,12 +42,12 @@ import {
 } from "@/lib/types";
 
 export const EXTERNAL_LINKS = {
-  GITHUB: "https://github.com/shahsagarm",
-  GITHUB_REPO: "https://github.com/shahsagarm/sagarshah.dev",
-  TWITTER: "https://twitter.com/shahsagarm",
-  FIGMA: "https://www.figma.com/@shahsagarm",
-  FIGMA_FILE:
-    "https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop",
+  GITHUB: "https://github.com/sardaribrarahmad",
+  // GITHUB_REPO: "https://github.com/shahsagarm/sagarshah.dev",
+  // TWITTER: "https://twitter.com/shahsagarm",
+  // FIGMA: "https://www.figma.com/@shahsagarm",
+  // FIGMA_FILE:
+  //   "https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop",
 };
 
 export const NAV_LINKS = [
@@ -116,22 +116,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     darkModeLogo: LogoExpressLight,
     url: "https://expressjs.com/",
   },
-  {
-    label: "Nest.js",
-    logo: LogoNest,
-    url: "https://nestjs.com/",
-  },
-  {
-    label: "Socket.io",
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: "https://socket.io/",
-  },
-  {
-    label: "PostgreSQL",
-    logo: LogoPostgreSQL,
-    url: "https://www.postgresql.org/",
-  },
+
   {
     label: "MongoDB",
     logo: LogoMongoDB,
@@ -158,11 +143,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     darkModeLogo: LogoCypressLight,
     url: "https://www.cypress.io/",
   },
-  {
-    label: "Storybook",
-    logo: LogoStorybook,
-    url: "https://storybook.js.org/",
-  },
+
   {
     label: "Git",
     logo: LogoGit,
@@ -175,36 +156,27 @@ export const EXPERIENCES: ExperienceDetails[] = [
     logo: LogoUpwork,
     logoAlt: "Upwork logo",
     position: "Independent Freelancer",
-    startDate: new Date(2021, 10),
-    currentlyWorkHere: true,
+    startDate: new Date(2022, 10),
+    endDate: new Date(2022, 12),
+    currentlyWorkHere: false,
     summary: [
-      "Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.",
-      "Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.",
+      "Worked for various clients",
+      "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others.",
     ],
   },
   {
-    logo: LogoGreenApex,
-    darkModeLogo: LogoGreenApexLight,
-    logoAlt: "Greenapex logo",
-    position: "Team Lead",
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
+    logo: "",
+    darkModeLogo: "",
+    logoAlt: "",
+    position: "Front end Developer ",
+    startDate: new Date(2024, 2),
+    endDate: new Date(2024, 9),
     summary: [
-      "Acted as team lead in different projects.",
       "Brainstormed new ideas & gathered requirements for internal projects.",
       "Designed architecture of different projects (frontend + backend).",
-      "Worked on enterprise-level projects for a variety of clients.",
+      "Worked on enterprise-level projects",
       "Handled sprint planning & task distribution.",
     ],
-  },
-  {
-    logo: LogoDotnpixel,
-    darkModeLogo: LogoDotnpixelLight,
-    logoAlt: "Dotnpixel logo",
-    position: "Full Stack Developer",
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
-    summary: ["Worked as a full stack developer (React / Laravel)."],
   },
 ];
 
@@ -213,7 +185,7 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Wingie",
     description:
       "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
-    url: "https://www.wingie.com",
+    url: "",
     previewImage: ProjectWingie,
     technologies: [
       "React",
@@ -221,7 +193,6 @@ export const PROJECTS: ProjectDetails[] = [
       "React Bootstrap",
       "Firebase",
       "Express.js",
-      "PostgreSQL",
       "Styled Components",
       "Redux",
     ],
@@ -230,7 +201,7 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Fiskil",
     description:
       "A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.",
-    url: "https://fiskil.com.au",
+    url: "",
     previewImage: ProjectFiskil,
     technologies: [
       "React",
@@ -241,18 +212,14 @@ export const PROJECTS: ProjectDetails[] = [
       "Redux Toolkit",
       "React Query",
       "Express.js",
-      "PostgreSQL",
       "Firebase",
-      "AWS Amplify",
-      "Cypress",
-      "Storybook",
     ],
   },
   {
     name: "Pepehousing",
     description:
       "A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.",
-    url: "https://pepehousing.com",
+    url: "",
     previewImage: ProjectPepehousing,
     technologies: [
       "React",
@@ -261,23 +228,22 @@ export const PROJECTS: ProjectDetails[] = [
       "Tailwindcss",
       "Redux Toolkit",
       "React Query",
-      "Storybook",
     ],
   },
 ];
 
 export const TESTIMONIALS: TestimonialDetails[] = [
   {
-    personName: "Krisztian Gyuris",
-    personAvatar: AvatarKrisztian,
-    title: "Founder - inboxgenie.io",
+    personName: "Hamza Ahmad",
+    personAvatar: AvatarDummy,
+    title: "Client",
     testimonial:
-      "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.",
+      "Job well done! I am really impressed. He is very very good at what he does I would recommend sardar Ibrar and will rehire in the future for Frontend development.",
   },
   {
     personName: "Eugen Esanu",
-    personAvatar: AvatarEugen,
-    title: "Founder - shosho.design",
+    personAvatar: AvatarDummy,
+    title: "founder",
     testimonial:
       "Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.",
   },
@@ -286,6 +252,6 @@ export const TESTIMONIALS: TestimonialDetails[] = [
     personAvatar: AvatarDummy,
     title: "Freelancer",
     testimonial:
-      "Sagar was extremely easy and pleasant to work with and he truly cares about the project being a success. Sagar has a high level of knowledge and was able to work on my MERN stack application without any issues.",
+      "Ibrar was extremely easy and pleasant to work with and he truly cares about the project being a success.Ibrar has a high level of knowledge and was able to work on my MERN stack application without any issues.",
   },
 ];

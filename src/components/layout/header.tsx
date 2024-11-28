@@ -21,7 +21,7 @@ import Typography from '@/components/general/typography';
 
 const Logo = () => (
   <Typography variant="h3" className="font-bold">
-    {'<SS />'}
+    {"<SIA />"}
   </Typography>
 );
 
@@ -40,8 +40,8 @@ const Header = () => {
   return (
     <header
       className={mergeClasses(
-        'sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100',
-        scrolled ? 'bg-gray/50 backdrop-blur-xl md:border-gray-100' : ''
+        "sticky top-0 z-30 w-full border-b border-transparent bg-gray max-md:border-gray-100",
+        scrolled ? "bg-gray/50 backdrop-blur-xl md:border-gray-100" : ""
       )}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between p-4 md:px-8">
@@ -58,7 +58,7 @@ const Header = () => {
           </ul>
           <div className="h-6 w-0.5 bg-gray-100"></div>
           <div className="flex items-center gap-4">
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
             <DownloadCV />
           </div>
         </div>
@@ -99,8 +99,8 @@ const Header = () => {
             </div>
             <div className="flex flex-col gap-4 p-4">
               <div className="flex items-center justify-between">
-                <Typography>Switch Theme</Typography>
-                <ThemeSwitcher />
+                {/* <Typography>Switch Theme</Typography>
+                <ThemeSwitcher /> */}
               </div>
               <DownloadCV />
             </div>
