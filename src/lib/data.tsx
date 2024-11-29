@@ -163,9 +163,23 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Worked for various clients",
       "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others.",
     ],
+    Name: "",
   },
   {
     logo: "",
+    Name: "Dev District",
+    darkModeLogo: "",
+    logoAlt: "",
+    position: "Full Stack Developer Intern",
+    startDate: new Date(2023, 4),
+    endDate: new Date(2023, 11),
+    summary: [
+      "Handled company's core product from scratch including planning, development, deployment, team management",
+    ],
+  },
+  {
+    logo: "",
+    Name: "Innov.dev",
     darkModeLogo: "",
     logoAlt: "",
     position: "Front end Developer ",
@@ -241,7 +255,7 @@ export const TESTIMONIALS: TestimonialDetails[] = [
       "Job well done! I am really impressed. He is very very good at what he does I would recommend sardar Ibrar and will rehire in the future for Frontend development.",
   },
   {
-    personName: "Eugen Esanu",
+    personName: "Dev District",
     personAvatar: AvatarDummy,
     title: "founder",
     testimonial:

@@ -16,6 +16,7 @@ export type ExperienceDetails = {
   startDate: Date;
   endDate?: Date;
   summary: string[];
+  Name: string;
 };
 
 export type ProjectDetails = {
