@@ -10,48 +10,36 @@ import Footer from '@/components/layout/footer';
 const inter = Inter({ subsets: ['latin'] });
 
 const title = "Sardar Ibrar | Frontend developer  ";
-const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
-const url = 'https://sagarshah.dev';
+const description = "";
+const url = "https://sardaribrar-dev.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
   title,
   description,
   keywords: [
-    'Frontend Developer',
-    'Full Stack Developer',
-    'React Developer',
-    'Next.js Developer',
+    "Frontend Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
   ],
-  creator: 'Sagar Shah',
+  creator: "Sardar Ibrar Ahmad ",
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
-    type: 'website',
+    type: "website",
     url,
     title,
     description,
     siteName: title,
-    images: [
-      {
-        url: '/images/open-graph-sagar.png',
-      },
-    ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description,
-    creator: '@shahsagarm',
-    images: '/images/open-graph-sagar.png',
-  },
+
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
