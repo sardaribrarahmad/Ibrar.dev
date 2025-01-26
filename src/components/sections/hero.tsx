@@ -54,7 +54,7 @@ const HeroSection = () => {
                 {text.slice(0, prefix.length)}
               </span>
 
-              <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-3xl font-bold text-transparent md:text-5xl lg:text-5xl xl:text-5xl">
+              <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-2xl font-bold text-transparent md:text-5xl lg:text-5xl xl:text-5xl">
                 {text.slice(prefix.length)}
               </span>
             </Typography>
