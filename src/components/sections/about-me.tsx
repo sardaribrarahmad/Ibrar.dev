@@ -1,5 +1,4 @@
-"use client";
-import Image from 'next/image';
+import Image from "next/image";
 
 import Sardarfull from "/public/images/profile-pic.png";
 import Tag from "@/components/data-display/tag";
@@ -7,36 +6,8 @@ import Container from "@/components/layout/container";
 import Typography from "@/components/general/typography";
 import Link from "@/components/navigation/link";
 import { EXTERNAL_LINKS } from "@/lib/data";
-import { useEffect, useRef, useState } from "react";
 
 const AboutMeSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.2, // Triggers when 20% of the element is visible
-      }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
-
   return (
     <Container className="bg-gray-50" id="about">
       <div className="self-center">
@@ -45,14 +16,7 @@ const AboutMeSection = () => {
 
       <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
         {/* Image */}
-        <div
-          ref={imageRef}
-          className={`flex transform justify-center transition-all duration-1000 md:order-first md:justify-end ${
-            isVisible
-              ? "translate-x-0 opacity-100"
-              : "-translate-x-full opacity-0"
-          }`}
-        >
+        <div className="flex justify-center md:order-first md:justify-end">
           <div className="relative h-[380px] w-[320px] md:h-[460px] md:w-[380px] lg:h-[520px] lg:w-[440px]">
             <Image
               src={Sardarfull}

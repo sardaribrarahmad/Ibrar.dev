@@ -20,7 +20,7 @@ import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
 
 const Logo = () => (
-  <Typography variant="h6" className="font-bold">
+  <Typography variant="h6" className="font-bold text-sm md:text-base lg:text-lg">
     {"Sardar Ibrar Ahmad | Software Engineer "}
   </Typography>
 );

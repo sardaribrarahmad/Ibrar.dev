@@ -50,11 +50,11 @@ const HeroSection = () => {
         <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
           <div className="flex flex-col gap-2">
             <Typography variant="h4">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-6xl font-bold text-transparent">
-              {text.slice(0, prefix.length)}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-2xl font-bold text-transparent md:text-5xl lg:text-5xl xl:text-5xl">
+                {text.slice(0, prefix.length)}
               </span>
-            
-              <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-6xl font-bold text-transparent">
+
+              <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-3xl font-bold text-transparent md:text-5xl lg:text-5xl xl:text-5xl">
                 {text.slice(prefix.length)}
               </span>
             </Typography>
