@@ -16,6 +16,7 @@ const typographyVariants = cva("text-gray-600 text-normal", {
       body1: "text-base md:text-lg",
       body2: "text-base",
       body3: "text-sm",
+      h6: "text-lg md:text-base text-gray-600",
     },
   },
   defaultVariants: {
@@ -38,6 +39,7 @@ let elementMapping = {
   h3: "h3",
   h4: "h4",
   h5: "h5",
+  h6: "h6",
   subtitle: "p",
   body1: "p",
   body2: "p",

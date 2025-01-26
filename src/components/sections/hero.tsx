@@ -2,22 +2,25 @@
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import SardarImg from "/public/images/profile-pic.png";
+import SardarImg from "/public/images/Herolatest.png";
 import SocialIcons from "@/components/data-display/social-icons";
 import Typography from "@/components/general/typography";
 import Container from "@/components/layout/container";
 
 const HeroSection = () => {
   const [text, setText] = useState("");
-  const fullText = "Hi, I'm Sardar Ibrar Ahmad";
+  const fullText = "Hi, I'm Sardar Ibrar Ahmad ";
   const delay = 100; // Delay in milliseconds between characters
-
+  const [imageLoaded, setImageLoaded] = useState(false); // Add this state
+  const prefix = "Hi, I'm ";
+  const name = " Sardar Ibrar Ahmad ";
   useEffect(() => {
+    setImageLoaded(true);
     let index = 0;
 
     const interval = setInterval(() => {
       if (index < fullText.length) {
-        setText(fullText.slice(0, index + 1)); // Use slicing to avoid state overlap
+        setText(fullText.slice(0, index + 1));
         index++;
       } else {
         clearInterval(interval);
@@ -31,15 +34,15 @@ const HeroSection = () => {
     <Container id="hero">
       <div className="flex flex-col gap-12 md:flex-row">
         {/* Image */}
-        <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
+        <div
+          className={`flex transform items-center justify-center transition-all duration-1000 md:order-last md:flex-grow md:justify-end ${
+            imageLoaded
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-0"
+          }`}
+        >
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
-            <Image
-              src={SardarImg}
-              alt="sardar Image"
-              className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
-              style={{ objectFit: "cover" }}
-            ></Image>
-            <div className="absolute h-[280px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]"></div>
+            <Image src={SardarImg} alt="sardar Image" />
           </div>
         </div>
 
@@ -47,9 +50,13 @@ const HeroSection = () => {
         <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
           <div className="flex flex-col gap-2">
             <Typography variant="h4">
-              {text}
-
-              {/* <span className="inline-block animate-waving-hand">👋</span> */}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-6xl font-bold text-transparent">
+              {text.slice(0, prefix.length)}
+              </span>
+            
+              <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-6xl font-bold text-transparent">
+                {text.slice(prefix.length)}
+              </span>
             </Typography>
             <Typography variant="h5">
               I am a dynamic and results-driven web developer with hands-on

@@ -19,6 +19,7 @@ import LogoCypress from "/public/images/logos/icon-cypress.svg";
 import LogoCypressLight from "/public/images/logos/icon-cypress-light.svg";
 import LogoStorybook from "/public/images/logos/icon-storybook.svg";
 import LogoGit from "/public/images/logos/icon-git.svg";
+import SardarImg from "/public/images/Dlogo.png";
 
 import LogoUpwork from "/public/images/logos/logo-upwork.svg";
 import LogoGreenApex from "/public/images/logos/logo-greenapex.svg";
@@ -153,6 +154,50 @@ export const TECHNOLOGIES: TechDetails[] = [
 
 export const EXPERIENCES: ExperienceDetails[] = [
   {
+    logo: SardarImg,
+    logoAlt: "Upwork logo",
+    position: "Junior MERN Stack Developer",
+    startDate: new Date(2024, 11),
+    currentlyWorkHere: true,
+    summary: [
+      "Enhanced backend APIs calls workflow efficiency by implementing Saga and Thunk as middleware",
+      "Bundled React.js applications using Webpack to optimize performance and streamline the deployment process",
+      "Participating in code reviews and providing constructive feedback to other developers",
+      "Implementing responsive design and ensuring cross-browser compatibility",
+      "Proficient in utilizing Git version control and collaboration tools such as GitHub and Bitbucket to effectively manage codebases and foster seamless team collaboration",
+    ],
+    Name: "DevShine",
+  },
+
+
+  {
+    logo: "",
+    Name: "Dev District",
+    darkModeLogo: "",
+    logoAlt: "",
+    position: "Full Stack Developer Intern",
+    startDate: new Date(2024, 5),
+    endDate: new Date(2024, 8),
+    summary: [
+      "Contributed to production-level applications from scratch, handling planning, development, deployment, and collaborating with the team as a Full Stack Intern.",
+    ],
+  },
+  {
+    logo: "",
+    Name: "Innov.dev",
+    darkModeLogo: "",
+    logoAlt: "",
+    position: "Front end Traniee ",
+    startDate: new Date(2024, 3),
+    endDate: new Date(2024, 5),
+    summary: [
+      "Brainstormed new ideas & gathered requirements for internal projects.",
+    
+      "Worked on Basic projects",
+      
+    ],
+  },
+  {
     logo: LogoUpwork,
     logoAlt: "Upwork logo",
     position: "Independent Freelancer",
@@ -164,33 +209,6 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others.",
     ],
     Name: "",
-  },
-  {
-    logo: "",
-    Name: "Dev District",
-    darkModeLogo: "",
-    logoAlt: "",
-    position: "Full Stack Developer Intern",
-    startDate: new Date(2023, 4),
-    endDate: new Date(2023, 11),
-    summary: [
-      "Handled company's core product from scratch including planning, development, deployment, team management",
-    ],
-  },
-  {
-    logo: "",
-    Name: "Innov.dev",
-    darkModeLogo: "",
-    logoAlt: "",
-    position: "Front end Developer ",
-    startDate: new Date(2024, 2),
-    endDate: new Date(2024, 9),
-    summary: [
-      "Brainstormed new ideas & gathered requirements for internal projects.",
-      "Designed architecture of different projects (frontend + backend).",
-      "Worked on enterprise-level projects",
-      "Handled sprint planning & task distribution.",
-    ],
   },
 ];
 

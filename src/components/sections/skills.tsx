@@ -12,7 +12,9 @@ const SkillsSection = () => {
           <Tag label="Skills" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          The skills, tools and technologies I am really good at:
+          <span className="bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-4xl font-bold text-transparent">
+            The skills, tools and technologies I am really good at:
+          </span>
         </Typography>
       </div>
 

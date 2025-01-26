@@ -1,13 +1,42 @@
+"use client";
 import Image from 'next/image';
 
-import SagarFullPose from "/public/images/hello.jpg";
+import Sardarfull from "/public/images/profile-pic.png";
 import Tag from "@/components/data-display/tag";
 import Container from "@/components/layout/container";
 import Typography from "@/components/general/typography";
 import Link from "@/components/navigation/link";
 import { EXTERNAL_LINKS } from "@/lib/data";
+import { useEffect, useRef, useState } from "react";
 
 const AboutMeSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2, // Triggers when 20% of the element is visible
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
   return (
     <Container className="bg-gray-50" id="about">
       <div className="self-center">
@@ -16,10 +45,17 @@ const AboutMeSection = () => {
 
       <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
         {/* Image */}
-        <div className="flex justify-center md:order-first md:justify-end">
+        <div
+          ref={imageRef}
+          className={`flex transform justify-center transition-all duration-1000 md:order-first md:justify-end ${
+            isVisible
+              ? "translate-x-0 opacity-100"
+              : "-translate-x-full opacity-0"
+          }`}
+        >
           <div className="relative h-[380px] w-[320px] md:h-[460px] md:w-[380px] lg:h-[520px] lg:w-[440px]">
             <Image
-              src={SagarFullPose}
+              src={Sardarfull}
               alt="Fullpose of Sagar"
               className="absolute z-10 h-[360px] w-[280px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"
               style={{ objectFit: "cover" }}
@@ -31,35 +67,20 @@ const AboutMeSection = () => {
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6 text-justify">
           <Typography variant="h3">
-            Curious about me? Here you have it:
+            <span className="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-5xl font-bold text-transparent">
+              Overview
+            </span>
           </Typography>
           <Typography>
-            I&apos;m a passionate, self-proclaimed developer who specializes in
-            frontend development (React.js & Next.js). I am enthusiastic about
-            bringing the technical and visual aspects of digital products to
-            life. User experience, pixel perfect design, and writing clear,
-            readable, highly performant code matters to me.
+            I&apos;m a passionate, self-proclaimed software engineer and
+            enthusiastic about bringing the technical and visual aspects of
+            digital products to life. User experience, pixel perfect design, and
+            writing clear, readable, highly performant code matters to me.
           </Typography>
           <Typography>
-            I began my journey as a web developer in 2020, and since then,
+            I began my journey as a web developer in 2023, and since then,
             I&apos;ve continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way. Now,
-            in my early thirties, 3 years after starting my web development
-            journey, I&apos;m building cutting-edge web applications using
-            modern technologies such as Next.js, TypeScript, Tailwindcss.
-          </Typography>
-          <Typography>
-            I am very much a progressive thinker and enjoy working on products
-            end to end, from ideation all the way to development
-            <Link
-              noCustomization
-              externalLink
-              withUnderline
-              href={EXTERNAL_LINKS.GITHUB}
-            >
-              GitHub
-            </Link>
-            .
+            challenges and learning the latest technologies along the way.
           </Typography>
 
           <Typography>Finally, some quick bits about me.</Typography>
@@ -70,10 +91,14 @@ const AboutMeSection = () => {
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">Avid learner</Typography>
             </ul>
+            <ul className="flex list-inside list-disc flex-col gap-2">
+              <Typography component="li">Tech Enthusiast</Typography>
+            </ul>
           </div>
           <Typography>
-            One last thing, I&apos;m available for freelance work, so feel free
-            to reach out.
+            <span className="bg-gradient-to-r from-blue-400 to-green-200 bg-clip-text text-xl font-bold text-transparent">
+              I&apos;m available for freelance work, so feel free to reach out.
+            </span>
           </Typography>
         </div>
       </div>

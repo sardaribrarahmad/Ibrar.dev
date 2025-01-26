@@ -9,7 +9,7 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = "Sardar Ibrar | Frontend developer  ";
+const title = "Sardar Ibrar Ahmad  ";
 const description = "";
 const url = "https://sardaribrar-dev.vercel.app/";
 
