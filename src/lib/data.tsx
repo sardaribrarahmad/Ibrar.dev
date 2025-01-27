@@ -156,7 +156,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: SardarImg,
     logoAlt: "Upwork logo",
-    position: "Junior MERN Stack Developer",
+    position: "Junior Mern Stack Developer",
     startDate: new Date(2024, 11),
     currentlyWorkHere: true,
     summary: [
@@ -168,7 +168,6 @@ export const EXPERIENCES: ExperienceDetails[] = [
     ],
     Name: "DevShine",
   },
-
 
   {
     logo: "",
@@ -182,21 +181,21 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Contributed to production-level applications from scratch, handling planning, development, deployment, and collaborating with the team as a Full Stack Intern.",
     ],
   },
-  {
-    logo: "",
-    Name: "Innov.dev",
-    darkModeLogo: "",
-    logoAlt: "",
-    position: "Front end Traniee ",
-    startDate: new Date(2024, 3),
-    endDate: new Date(2024, 5),
-    summary: [
-      "Brainstormed new ideas & gathered requirements for internal projects.",
-    
-      "Worked on Basic projects",
-      
-    ],
-  },
+  // {
+  //   logo: "",
+  //   Name: "Innov.dev",
+  //   darkModeLogo: "",
+  //   logoAlt: "",
+  //   position: "Front end Traniee ",
+  //   startDate: new Date(2024, 3),
+  //   endDate: new Date(2024, 5),
+  //   summary: [
+  //     "Brainstormed new ideas & gathered requirements for internal projects.",
+
+  //     "Worked on Basic projects",
+
+  //   ],
+  // },
   {
     logo: LogoUpwork,
     logoAlt: "Upwork logo",
