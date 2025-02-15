@@ -174,48 +174,50 @@ export const EXPERIENCES: ExperienceDetails[] = [
     Name: "Dev District",
     darkModeLogo: "",
     logoAlt: "",
-    position: "Full Stack Developer Intern",
+    position: "Frontend Developer",
     startDate: new Date(2024, 5),
     endDate: new Date(2024, 8),
     summary: [
-      "Contributed to production-level applications from scratch, handling planning, development, deployment, and collaborating with the team as a Full Stack Intern.",
+      "End-to-End Development – Designed and developed production-level applications from scratch, ensuring scalability and performance",
+
+      "Full Development Lifecycle – Managed the entire process from planning and development to deployment, ensuring smooth project execution",
+
+      "Team Collaboration – Worked closely with cross-functional teams to align frontend development with overall project goals and user experience.",
+    ],
+  },
+  {
+    logo: "",
+    Name: "Innov.dev",
+    darkModeLogo: "",
+    logoAlt: "",
+    position: "Frontend Devloper ",
+    startDate: new Date(2023, 5),
+    endDate: new Date(2023, 8),
+    summary: [
+      "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others",
     ],
   },
   // {
   //   logo: "",
-  //   Name: "Innov.dev",
-  //   darkModeLogo: "",
+  //   Name: "Innvo.dev",
   //   logoAlt: "",
-  //   position: "Front end Traniee ",
-  //   startDate: new Date(2024, 3),
-  //   endDate: new Date(2024, 5),
+  //   position: "Frontend Developer Intern",
+  //   startDate: new Date(2022, 10),
+  //   endDate: new Date(2022, 12),
+  //   currentlyWorkHere: false,
   //   summary: [
-  //     "Brainstormed new ideas & gathered requirements for internal projects.",
-
-  //     "Worked on Basic projects",
-
+  //     "Worked for various clients",
+  //     "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others",
   //   ],
+  //   Name: "",
   // },
-  {
-    logo: LogoUpwork,
-    logoAlt: "Upwork logo",
-    position: "Independent Freelancer",
-    startDate: new Date(2022, 10),
-    endDate: new Date(2022, 12),
-    currentlyWorkHere: false,
-    summary: [
-      "Worked for various clients",
-      "Worked with a variety of technologies, including React, Next.js, Typescript, Tailwindcss,Firebase,  and others.",
-    ],
-    Name: "",
-  },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: "Wingie",
+    name: "TaskFlow",
     description:
-      "A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.",
+      "A modern task management web app that helps users organize their to-dos efficiently with real-time updates and a sleek UI",
     url: "",
     previewImage: ProjectWingie,
     technologies: [
@@ -229,9 +231,9 @@ export const PROJECTS: ProjectDetails[] = [
     ],
   },
   {
-    name: "Fiskil",
+    name: "DevConnect",
     description:
-      "A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.",
+      "A networking platform for developers to share projects, collaborate, and engage in discussions with industry professionals",
     url: "",
     previewImage: ProjectFiskil,
     technologies: [
