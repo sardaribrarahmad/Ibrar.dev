@@ -48,10 +48,10 @@ const AboutMeSection = () => {
           </Typography>
 
           <Typography>Finally, some quick bits about me.</Typography>
-          <div className="flex flex-col gap-2 md:flex-row md:gap-6">
+          <div className="flex flex-col gap-2 md:flex-col md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                B.S Computer Sciences Fast-Nuces{" "}
+                B.S Computer Sciences Fast-Nuces
               </Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
