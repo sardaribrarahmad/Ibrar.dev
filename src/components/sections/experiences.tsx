@@ -13,7 +13,7 @@ const ExperienceSection = () => {
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
           <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-xl font-bold text-transparent">
-            Here is a quick summary of my most recent experiences:
+            Here is a quick summary of my most recent experiences
           </span>
         </Typography>
       </div>

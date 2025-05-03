@@ -10,25 +10,48 @@ import Container from "@/components/layout/container";
 const HeroSection = () => {
   const [text, setText] = useState("");
   const fullText = "Hi, I'm Sardar Ibrar Ahmad ";
-  const delay = 100; // Delay in milliseconds between characters
-  const [imageLoaded, setImageLoaded] = useState(false); // Add this state
-  const prefix = "Hi, I'm ";
-  const name = " Sardar Ibrar Ahmad ";
+  const typingSpeed = 100;
+  const pauseDuration = 1500; // Pause before erasing or retyping
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     setImageLoaded(true);
-    let index = 0;
 
-    const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setText(fullText.slice(0, index + 1));
-        index++;
+    const prefix = "Hi, I'm ";
+    const name = "Sardar Ibrar Ahmad";
+    const fullText = prefix + name;
+    let index = prefix.length;
+    let typing = true;
+
+    const loopTyping = () => {
+      if (typing) {
+        if (index <= fullText.length) {
+          setText(fullText.slice(0, index));
+          index++;
+        } else {
+          typing = false;
+          setTimeout(loopTyping, pauseDuration);
+          return;
+        }
       } else {
-        clearInterval(interval);
+        if (index > prefix.length) {
+          index--;
+          setText(fullText.slice(0, index));
+        } else {
+          typing = true;
+          setTimeout(loopTyping, typingSpeed);
+          return;
+        }
       }
-    }, delay);
+      setTimeout(loopTyping, typingSpeed);
+    };
 
-    return () => clearInterval(interval);
+    const timeout = setTimeout(loopTyping, typingSpeed);
+    return () => clearTimeout(timeout);
   }, []);
+
+  const prefix = "Hi, I'm ";
+  const name = "Sardar Ibrar Ahmad";
 
   return (
     <Container id="hero">
@@ -58,17 +81,49 @@ const HeroSection = () => {
                 {text.slice(prefix.length)}
               </span>
             </Typography>
-            <Typography variant="h5">
-              I am a dynamic and results-driven web developer with hands-on
-              experience in both front-end and back-end technologies. I
-              specialize in creating scalable, user-centric web applications and
-              have successfully delivered complex solutions using the MERN
-              stack. My expertise includes designing efficient APIs, building
-              responsive UIs, and managing NoSQL databases. I aspire to continue
-              innovating in web development, leveraging cutting-edge
-              technologies to deliver impactful digital experiences.
-            </Typography>
+
+            <div className="flex flex-col gap-2">
+              {/* Content for small screens */}
+              <Typography variant="h5" className="block md:hidden">
+                I am a dynamic and results-driven web developer with hands-on
+                experience in both front-end and back-end technologies. I
+                specialize in creating scalable, user-centric web applications
+                and have successfully delivered complex solutions using the MERN
+                stack. My expertise includes designing efficient APIs, building
+                responsive UIs, and managing NoSQL databases. I aspire to
+                continue innovating in web development, leveraging cutting-edge
+                technologies to deliver impactful digital experiences.
+              </Typography>
+
+              {/* Content for medium and larger screens */}
+              <div className="hidden flex-wrap gap-2 md:flex">
+                {[
+                  "MERN Stack",
+                  "React.js",
+                  "Next.js",
+                  "Node.js",
+                  "Express.js",
+                  "MongoDB",
+                  "REST APIs",
+                  "Responsive UI",
+                  "Frontend & Backend",
+                  "NoSQL Databases",
+                  "Scalable Apps",
+                  "Web Development",
+                  "API Design",
+                  "Agile Development",
+                ].map((keyword, index) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
+
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" />
@@ -85,6 +140,7 @@ const HeroSection = () => {
               <Typography>Available for new projects</Typography>
             </div>
           </div>
+
           <SocialIcons />
         </div>
       </div>

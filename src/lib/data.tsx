@@ -29,6 +29,7 @@ import LogoDotnpixelLight from "/public/images/logos/logo-dotnpixel-light.svg";
 
 import ProjectFiskil from "/public/images/project-fiskil.png";
 import ProjectWingie from "/public/images/project-wingie.png";
+import ProjectSardar from "/public/images/Canzuk.png";
 import ProjectPepehousing from "/public/images/project-pepehousing.png";
 
 import AvatarKrisztian from "/public/images/avatar-krisztian.png";
@@ -156,7 +157,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: SardarImg,
     logoAlt: "Upwork logo",
-    position: "Junior Mern Stack Developer",
+    position: "Mern Stack Developer",
     startDate: new Date(2024, 11),
     currentlyWorkHere: true,
     summary: [
@@ -174,7 +175,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     Name: "Dev District",
     darkModeLogo: "",
     logoAlt: "",
-    position: "Frontend Developer",
+    position: "Associate software engineer",
     startDate: new Date(2024, 5),
     endDate: new Date(2024, 8),
     summary: [
@@ -215,17 +216,15 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: "TaskFlow",
+    name: "canzuk-web",
     description:
-      "A modern task management web app that helps users organize their to-dos efficiently with real-time updates and a sleek UI",
+      "A modern Travel agency web app that helps users organize their trips efficiently with real-time updates and a sleek UI",
     url: "",
-    previewImage: ProjectWingie,
+    previewImage: ProjectSardar,
     technologies: [
-      "React",
+      "Next js",
       "Typescript",
       "React Bootstrap",
-      "Firebase",
-      "Express.js",
       "Styled Components",
       "Redux",
     ],
